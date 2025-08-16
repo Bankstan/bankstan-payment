@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "veWQi4JQ7PI=",
+  "success": true,
+  "projectFilePath": "/home/vhmd_0chok/Desktop/bankstan-payment/bankstan-payment.csproj",
+  "expectedPackageFiles": [
+    "/home/vhmd_0chok/.nuget/packages/microsoft.aspnetcore.openapi/9.0.8/microsoft.aspnetcore.openapi.9.0.8.nupkg.sha512",
+    "/home/vhmd_0chok/.nuget/packages/microsoft.openapi/1.6.17/microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}

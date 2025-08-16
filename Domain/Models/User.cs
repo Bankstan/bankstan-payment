@@ -1,6 +1,5 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using bankstan_payment.Domain.Enum;
 
 namespace bankstan_payment.Domain.Models;
 
@@ -27,6 +26,7 @@ public class User
 
     public Gender Gender { get; set; }
 
+
     public DateTime BirthDate { get; set; }
 
     [Phone] public string Phone { get; set; } = string.Empty;
@@ -40,4 +40,10 @@ public class User
     public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
 
     [InverseProperty("User")] public ICollection<Account> Accounts { get; set; } = new List<Account>();
+}
+
+public enum Gender
+{
+    Male,
+    Female
 }

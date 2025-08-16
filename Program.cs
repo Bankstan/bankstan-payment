@@ -8,6 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddOpenApi();
 builder.Services.AddDbContext<ApplicationDbContext>(o => { o.UseNpgsql(builder.Configuration["DefaultConnection"]!); }
 );
+builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 // Replace placeholder with actual secret
 
 var app = builder.Build();

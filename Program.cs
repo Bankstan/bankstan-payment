@@ -1,13 +1,14 @@
+using bankstan_payment.Domain;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
-
+builder.Services.AddDbContext<ApplicationDbContext>(o => { o.UseNpgsql(builder.Configuration["DefaultConnection"]!); }
+);
 // Replace placeholder with actual secret
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-connectionString = connectionString.Replace("${DATABASE_URL}", Environment.GetEnvironmentVariable("DATABASE_URL"));
-builder.Configuration["ConnectionStrings:DefaultConnection"] = connectionString;
 
 var app = builder.Build();
 
